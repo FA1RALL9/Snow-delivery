@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора - Сибирь</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="index.html" style="text-decoration: none; display: block;">
+                    <div class="logo">
+                        <img src="images/snow.png" alt="Сибирь" class="logo__image">
+                        <span class="logo__text">Сибирь</span>
+                    </div>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html#about" class="nav__link">О компании</a></li>
+                        <li class="nav__item"><a href="index.html#delivery" class="nav__link">Доставка</a></li>
+                        <li class="nav__item"><a href="index.html#reasons" class="nav__link">Преимущества</a></li>
+                        <li class="nav__item"><a href="index.html#form" class="nav__link">Заказать</a></li>
+                    </ul>
+                </nav>
+                <div class="user-profile" id="userProfile">
+                    <span class="user-profile__name" id="userName"></span>
+                    <div class="user-profile__dropdown">
+                        <div data-admin="true">
+                            <button class="user-profile__button" id="adminBtn">Админ-панель</button>
+                        </div>
+                        <button class="user-profile__button" id="profileBtn">Личный кабинет</button>
+                        <button class="user-profile__button" id="logoutBtn">Выйти</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="adminPage" class="admin-page">
+        <div class="container">
+            <h2 class="admin-page__title">Панель администратора</h2>
+            <div class="admin-tabs">
+                <button class="admin-tabs__btn active" data-tab="orders">Заказы</button>
+                <button class="admin-tabs__btn" data-tab="users">Пользователи</button>
+            </div>
+            <div class="admin-content">
+                <div class="admin-tab active" id="ordersTab">
+                    <div class="admin-orders">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Дата</th>
+                                    <th>Клиент</th>
+                                    <th>Телефон</th>
+                                    <th>Email</th>
+                                    <th>Объем (кг)</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminOrdersList">
+                                <!-- Будет заполнено через JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="admin-tab" id="usersTab" style="display: none;">
+                    <div class="admin-users">
+                        <table class="users-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Имя</th>
+                                    <th>Email</th>
+                                    <th>Роль</th>
+                                    <th>Дата регистрации</th>
+                                    <th>Заказов</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminUsersList">
+                                <!-- Будет заполнено через JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 ООО "Сибирь". Все права защищены.</p>
+            <div class="social-links">
+                <a href="https://t.me/sibirsnow" class="social-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+                <a href="https://discord.gg/sibirsnow" class="social-link" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="https://vk.com/sibirsnow" class="social-link" target="_blank" rel="noopener noreferrer">VK</a>
+            </div>
+            <p>sibirsnow@gmail.com</p>
+            <p>8 (913) 999-99-99</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для уведомлений (будет создано через JavaScript) -->
+
+    <script src="js/admin.js"></script>
+</body>
+</html> 

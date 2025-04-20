@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сибирь - Доставка снега</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <img src="images/snow.png" alt="Сибирь" class="logo__image">
+                    <span class="logo__text">Сибирь</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#about" class="nav__link">О компании</a></li>
+                        <li class="nav__item"><a href="#delivery" class="nav__link">Доставка</a></li>
+                        <li class="nav__item"><a href="#reasons" class="nav__link">Преимущества</a></li>
+                        <li class="nav__item"><a href="#form" class="nav__link">Заказать</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons" id="authButtons">
+                    <button class="button button--secondary" id="loginBtn">Войти</button>
+                    <button class="button" id="registerBtn">Регистрация</button>
+                </div>
+                <div class="user-profile" id="userProfile" style="display: none;">
+                    <span class="user-profile__name" id="userName"></span>
+                    <div class="user-profile__dropdown">
+                        <button class="user-profile__button" id="profileBtn">Личный кабинет</button>
+                        <button class="user-profile__button" id="logoutBtn">Выйти</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Компания "Сибирь" занимает должное место среди мировых поставщиков</h1>
+            <p class="hero__subtitle">Вы можете не беспокоиться, что ваш снег пострадает</p>
+            <a href="#form" class="button">Оставить заявку</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="about__title">О компании</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <img src="images/logistics.svg" alt="" class="feature-card__icon">
+                    <h3 class="feature-card__title">Крупнейший логистический оператор</h3>
+                    <p>Компания «Сибирь» специализируется на сборе, транспортировке и хранении снега</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/temperature.svg" alt="" class="feature-card__icon">
+                    <p>Современное холодильное оборудование и круглосуточное отслеживание</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/eco.svg" alt="" class="feature-card__icon">
+                    <h3 class="feature-card__title">Экологичный подход</h3>
+                    <p>Весь снег собирается из природных источников</p>
+                </div>
+                <div class="feature-card">
+                    <img src="images/quality.svg" alt="" class="feature-card__icon">
+                    <h3 class="feature-card__title">Снег под ключ</h3>
+                    <p>Поможем вам не только с доставкой, но и с оформлением всей необходимой документации</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="delivery" id="delivery">
+        <div class="container">
+            <h2 class="about__title">Как проходит доставка?</h2>
+            <div class="delivery__steps">
+                <div class="step">
+                    <h3>1. Оформление заявки</h3>
+                    <p>Заполняете все нужные пункты</p>
+                </div>
+                <div class="step">
+                    <h3>2. Обработка</h3>
+                    <p>Мы принимаем заявку и стараемся как можно быстрее с вами связаться для уточнения всех деталей</p>
+                </div>
+                <div class="step">
+                    <h3>3. Доставка</h3>
+                    <p>После уточнения всех деталей мы благополучно отправляем вам товар</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reasons" id="reasons">
+        <div class="container">
+            <h2 class="about__title">Почему стоит заказывать снег у нас?</h2>
+            <ul class="reasons__list">
+                <li class="reasons__item">Настоящий сибирский снег - без примесей!</li>
+                <li class="reasons__item">Быстрая доставка - снег не растает по пути!</li>
+                <li class="reasons__item">Снег для любых задач</li>
+                <li class="reasons__item">Мы работаем по всей стране</li>
+                <li class="reasons__item">Гибкие условия сотрудничества</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="form-section" id="form">
+        <div class="container">
+            <h2 class="about__title">Оставить заявку</h2>
+            <form class="form" id="orderForm">
+                <div class="form__group">
+                    <label class="form__label" for="name">Ваше имя</label>
+                    <input type="text" id="name" name="name" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="amount">Требуемый объем снега (в кг)</label>
+                    <input type="number" id="amount" name="amount" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="details">Дополнительные детали</label>
+                    <textarea id="details" name="details" class="form__input" rows="4"></textarea>
+                </div>
+                <button type="submit" class="button">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="authPages" style="display: none;">
+        <div id="loginPage" class="auth-page">
+            <div class="container">
+                <h2 class="auth-page__title">Вход в личный кабинет</h2>
+                <form id="loginForm" class="form">
+                    <div class="form__group">
+                        <label class="form__label" for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="email" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="loginPassword">Пароль</label>
+                        <input type="password" id="loginPassword" name="password" class="form__input" required>
+                    </div>
+                    <button type="submit" class="button">Войти</button>
+                </form>
+                <p class="auth-page__switch">Нет аккаунта? <a href="#" id="showRegisterPage">Зарегистрироваться</a></p>
+            </div>
+        </div>
+
+        <div id="registerPage" class="auth-page" style="display: none;">
+            <div class="container">
+                <h2 class="auth-page__title">Регистрация</h2>
+                <form id="registerForm" class="form">
+                    <div class="form__group">
+                        <label class="form__label" for="registerName">Имя</label>
+                        <input type="text" id="registerName" name="name" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" name="email" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="registerPassword">Пароль</label>
+                        <input type="password" id="registerPassword" name="password" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="registerPasswordConfirm">Подтверждение пароля</label>
+                        <input type="password" id="registerPasswordConfirm" name="passwordConfirm" class="form__input" required>
+                    </div>
+                    <button type="submit" class="button">Зарегистрироваться</button>
+                </form>
+                <p class="auth-page__switch">Уже есть аккаунт? <a href="#" id="showLoginPage">Войти</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="profilePage" class="profile-page" style="display: none;">
+        <div class="container">
+            <h2 class="profile-page__title">Личный кабинет</h2>
+            <div class="profile-page__content">
+                <div class="profile-page__info">
+                    <h3>Ваши данные</h3>
+                    <div class="profile-page__data">
+                        <p><strong>Имя:</strong> <span id="profileName"></span></p>
+                        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                    </div>
+                </div>
+                <div class="profile-page__orders">
+                    <h3>Ваши заказы</h3>
+                    <div id="userOrders" class="orders-list">
+                        <p class="orders-list__empty">У вас пока нет заказов</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="adminPage" class="admin-page" style="display: none;">
+        <div class="container">
+            <h2 class="admin-page__title">Панель администратора</h2>
+            <div class="admin-tabs">
+                <button class="admin-tabs__btn active" data-tab="orders">Заказы</button>
+                <button class="admin-tabs__btn" data-tab="users">Пользователи</button>
+            </div>
+            <div class="admin-content">
+                <div class="admin-tab active" id="ordersTab">
+                    <div class="admin-orders">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Дата</th>
+                                    <th>Клиент</th>
+                                    <th>Телефон</th>
+                                    <th>Email</th>
+                                    <th>Объем (кг)</th>
+                                    <th>Статус</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminOrdersList">
+                                <!-- Будет заполнено через JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="admin-tab" id="usersTab" style="display: none;">
+                    <div class="admin-users">
+                        <table class="users-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Имя</th>
+                                    <th>Email</th>
+                                    <th>Роль</th>
+                                    <th>Дата регистрации</th>
+                                    <th>Заказов</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminUsersList">
+                                <!-- Будет заполнено через JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 ООО "Сибирь". Все права защищены.</p>
+            <div class="social-links">
+                <a href="https://t.me/sibirsnow" class="social-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+                <a href="https://discord.gg/sibirsnow" class="social-link" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="https://vk.com/sibirsnow" class="social-link" target="_blank" rel="noopener noreferrer">VK</a>
+            </div>
+            <p>sibirsnow@gmail.com</p>
+            <p>8 (913) 999-99-99</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
