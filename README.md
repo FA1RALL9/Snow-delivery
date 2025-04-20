@@ -13,7 +13,7 @@
 - Node.js
 - Express.js
 - Prisma (ORM)
-- Posgres (для разработки)
+- Postgres (для разработки)
 - JWT для аутентификации
 
 ## Функционал
